@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+    <title>Главная — ПГЭК</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,15 +12,42 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        header {
+        /* Стили для шапки */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #2c3e50;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 15px 30px;
+            flex-wrap: wrap;
         }
-        header h1 {
-            margin: 0;
-        }
+
+            #header .logo {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background: white;
+            }
+
+            #header h1 {
+                margin: 0;
+                font-size: 20px;
+                flex: 1;
+                text-align: center;
+            }
+
+            #header nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 15px;
+                font-weight: bold;
+            }
+
+                #header nav a:hover {
+                    text-decoration: underline;
+                }
+        /* Стили для контента */
         .container {
             max-width: 900px;
             margin: 20px auto;
@@ -29,19 +56,23 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .container img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto 20px;
-            border-radius: 8px;
-        }
+
+            .container img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto 20px;
+                border-radius: 8px;
+            }
+
         h2 {
             color: #2c3e50;
         }
+
         ul {
             line-height: 1.8;
         }
+        /* Стили для подвала */
         footer {
             text-align: center;
             padding: 15px;
@@ -53,23 +84,27 @@
 </head>
 <body>
 
-    <header>
-        <h1>🌍 Мой первый сайт</h1>
-        <p>Добро пожаловать на мою страницу!</p>
-    </header>
+    <!-- ЗАДАЧА 1: Блок #header -->
+    <div id="header">
+        <img src="https://via.placeholder.com/80x80?text=ПГЭК" alt="Логотип ПГЭК" class="logo">
+        <h1>Полоцкий государственный экономический колледж</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="contact.html">Контакты</a>
+            <a href="project.html">Проекты</a>
+        </nav>
+    </div>
 
     <div class="container">
-        <!-- Картинка -->
         <img src="https://picsum.photos/800/400" alt="Красивый пейзаж">
 
-        <!-- Название сайта -->
         <h2>О сайте</h2>
         <p>
             Этот сайт создан в качестве примера для демонстрации базовой структуры HTML-документа.
             Здесь вы найдёте картинку, заголовок и полезную информацию.
         </p>
 
-        <!-- Набор информации -->
         <h2>Полезная информация</h2>
         <ul>
             <li><strong>HTML</strong> — язык разметки гипертекста, основа веб-страниц.</li>
@@ -81,11 +116,12 @@
 
         <h2>Контакты</h2>
         <p>Email: example@mail.com</p>
-        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>Телефон: +375 (29) 123-45-67</p>
     </div>
 
+    <!-- ЗАДАЧА 2: Блок footer -->
     <footer>
-        &copy; 2024 Мой первый сайт. Все права защищены.
+        <p>&copy; 2026 Разработано студентами группы П-21</p>
     </footer>
 
 </body>

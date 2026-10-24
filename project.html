@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты разработчиков</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            padding: 30px 25px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        .card-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
+        .developer {
+            font-size: 0.95em;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .developer::before {
+            content: "👤";
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .status {
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .status.active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status.completed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .status.dev {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .link:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Проекты разработчиков</h1>
+            <p>Портфолио реализованных и текущих проектов</p>
+        </header>
+
+        <div class="projects-grid">
+
+            <!-- Проект 1 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <h2>TaskFlow</h2>
+                    <div class="developer">Анна Смирнова</div>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        Веб-приложение для управления задачами и совместной работы команды.
+                        Включает канбан-доски, систему напоминаний и аналитику продуктивности
+                        с наглядными графиками.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="status active">В работе</span>
+                        <a href="#" class="link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 2 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <h2>WeatherVision</h2>
+                    <div class="developer">Иван Петров</div>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        Мобильное приложение для прогноза погоды с интерактивными картами,
+                        push-уведомлениями о резких изменениях и виджетами для рабочего стола.
+                        Более 50 000 загрузок в App Store и Google Play.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="status completed">Завершён</span>
+                        <a href="#" class="link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 3 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <h2>ShopSmart AI</h2>
+                    <div class="developer">Мария Козлова</div>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        Платформа электронной коммерции с AI-рекомендациями товаров.
+                        Использует машинное обучение для персонализации выдачи и
+                        прогнозирования спроса на основе исторических данных.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="status dev">В разработке</span>
+                        <a href="#" class="link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>© 2024 Портфолио разработчиков. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
